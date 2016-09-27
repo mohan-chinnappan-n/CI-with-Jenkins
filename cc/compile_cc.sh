@@ -1,1 +1,1 @@
-gcc $1.cc -lstdc++ -o $1
+gcc $1.cc -lstdc++ -o ./bin/$1
