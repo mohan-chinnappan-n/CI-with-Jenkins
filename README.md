@@ -1,7 +1,7 @@
-## Explains how to integration Jenkins for Continuous Integration for Salesforce Development and Deployment
+## How to use Jenkins for Continuous Integration for Salesforce Development and Deployment
 
 
-### Demo : Screenshots
+### Demo : Screenshots  
 
 #### Jenkins Setting ANT home
 ![alt tag](https://github.com/mohan-chinnappan-n/CI-with-Jenkins/blob/master/demos/setting-ant-home.png)
