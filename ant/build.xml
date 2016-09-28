@@ -1,0 +1,166 @@
+<project basedir="." default="run" name="SFDC Ant tasks" xmlns:sf="antlib:com.salesforce">
+
+
+  <property file="../../build-access.properties"/>
+  <property file="build.properties"/>
+
+  <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
+  <!--
+  <taskdef name="saxon-xslt" classname="net.sf.saxon.ant.AntTransform"
+          classpath="lib/saxon9he.jar;lib/saxon9-ant.jar" />
+  -->
+
+  <property environment="env"/>
+  <target name="envtest">
+
+    <echo message=" home: ${env.HOME}"/>
+    <echo message=" un:   ${env.SFDC_UN}"/>
+    <echo message=" pwd:  ${env.SFDC_PWD}"/>
+
+  </target>
+
+
+  <target name="run">
+    <property name="subfolder" value=""/>
+    <foreach inheritall="true" list="${sf.package.list}" parallel="false" param="package_file" target="retrieve-org"/>
+  </target>
+
+<!-- retrieve from mohan's dev org  -->
+    <target name="retrieve-org">
+          <echo message=" --- Working on ${sf.src.dir}/${subfolder}${package_file}.xml ..."/>
+          <delete dir="${sf.src.dir}_data-${package_file}"/>
+          <mkdir dir="${sf.src.dir}_data-${package_file}"/>
+          <sf:retrieve username="${sf.mohan.username}" password="${sf.mohan.password}"
+              serverurl="${sf.mohan.serverurl}"
+              maxPoll="${sf.maxPoll}"
+              retrieveTarget="${sf.src.dir}_data-${package_file}"
+              unpackaged="${sf.src.dir}/${subfolder}${package_file}.xml"/>
+    </target>
+
+
+    <target name="merge-project-files-xslt">
+      <echo message="--- Deleting ${sf.package.merge.dir} ..."/>
+      <delete dir="${sf.package.merge.dir}"/>
+      <mkdir dir="${sf.package.merge.dir}"/>
+
+
+
+      <foreach target="xslt-extract" param="inputFile">
+      <fileset dir="${sf.src.dir}" casesensitive="yes">
+        <include name="*.xml"/>
+        <exclude name="*merge.xml"/>
+      </fileset>
+
+    </foreach>
+    <antcall target='concat-files'/>
+
+    </target>
+
+
+<target name="merge-project-files">
+  <echo message="--- Deleting ${sf.package.merge.dir} ..."/>
+  <delete dir="${sf.package.merge.dir}"/>
+  <mkdir dir="${sf.package.merge.dir}"/>
+
+  <copy todir="${sf.package.merge.dir}">
+    <fileset dir="${sf.src.dir}" includes="*.xml">
+    </fileset>
+  </copy>
+
+<replaceregexp byline="true">
+  <regexp pattern="&lt;Package .*$|&lt;\?xml.*$|&lt;\/Package&gt;|&lt;version.*&gt;"/>
+  <substitution expression=""/>
+  <fileset dir="${sf.package.merge.dir}" >
+    <include name="*.xml"/>
+  </fileset>
+</replaceregexp>
+
+ <antcall target='concat-files'/>
+
+</target>
+
+
+
+
+
+<target name='concat-files'>
+  <echo message=" --- Concating all the package files into: ${sf.package.merge.dir}/${sf.package.merge.name}.xml..."/>
+ <concat destfile="${sf.package.merge.dir}/packageHeader.txt">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+   &lt;Package xmlns="http://soap.sforce.com/2006/04/metadata"&gt;
+ </concat>
+
+
+  <concat destfile="${sf.package.merge.dir}/packageFooter.txt">
+    &lt;version>${sf.api.version}&lt;/version&gt;
+    &lt;/Package&gt;
+  </concat>
+
+
+  <concat destfile="${sf.package.merge.dir}/${sf.package.merge.name}.xml" overwrite='yes' append='no' >
+   <fileset dir="${sf.package.merge.dir}" includes="packageHeader.txt"/>
+   </concat>
+
+
+  <concat destfile="${sf.package.merge.dir}/${sf.package.merge.name}.xml" append="yes" >
+    <fileset dir="${sf.package.merge.dir}" includes="*.xml" excludes="packageAll.xml"/>
+  </concat>
+
+  <concat destfile="${sf.package.merge.dir}/${sf.package.merge.name}.xml" append="yes" >
+   <fileset dir="${sf.package.merge.dir}" includes="packageFooter.txt"/>
+  </concat>
+
+</target>
+
+
+<target name="merge-run">
+  <antcall target="merge-project-files"/>
+  <antcall target="retrieve-org">
+    <param name="package_file" value="${sf.package.merge.name}"/>
+    <param name="subfolder" value="merge/"/>
+  </antcall>
+</target>
+
+
+<target name="merge-xslt-run">
+  <antcall target="merge-project-files-xslt"/>
+  <antcall target="retrieve-org">
+    <param name="package_file" value="${sf.package.merge.name}"/>
+    <param name="subfolder" value="merge/"/>
+  </antcall>
+</target>
+
+
+
+<target name="xslt-extract">
+
+  <propertyregex property="outputFile"
+                 input="${inputFile}"
+                 regexp="${sf.src.dir}"
+                 replace="${sf.package.merge.dir}"
+                 global="true" />
+
+  <echo message="input: ${inputFile} output: ${outputFile}"/>
+
+
+   <xslt in="${inputFile}"
+         out="${outputFile}"
+         style="extractPackage.xslt"
+      >
+      <classpath location="${sf.saxon.jar}" />
+      <param name="MyParameter" expression="XSLT 2.0"/>
+   </xslt>
+</target>
+
+
+<target name="MyXSLT">
+   <xslt in="MyInput.xml"
+      out="MyOutput.xml"
+      style="extractPackage.xslt"
+      >
+      <classpath location="/usr/local/apache-ant/lib/saxon9he.jar" />
+      <param name="MyParameter" expression="XSLT 2.0"/>
+   </xslt>
+</target>
+
+
+  </project>

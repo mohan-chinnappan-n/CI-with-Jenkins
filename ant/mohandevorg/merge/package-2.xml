@@ -1,0 +1,8 @@
+
+    <types xmlns="http://soap.sforce.com/2006/04/metadata">
+        <members>Account</members>
+        <name>CustomObject</name>
+    </types>
+
+    <version xmlns="http://soap.sforce.com/2006/04/metadata">34.0</version>
+
