@@ -1,7 +1,7 @@
 <project basedir="." default="run" name="SFDC Ant tasks" xmlns:sf="antlib:com.salesforce">
 
 
-  <property file="../../build-access.properties"/>
+ 
   <property file="build.properties"/>
 
   <taskdef resource="net/sf/antcontrib/antcontrib.properties"/>
@@ -14,8 +14,8 @@
   <target name="envtest">
 
     <echo message=" home: ${env.HOME}"/>
-    <echo message=" un:   ${env.SFDC_UN}"/>
-    <echo message=" pwd:  ${env.SFDC_PWD}"/>
+    <echo message=" un:   ${SFDC_UN}"/>
+    <echo message=" pwd:  ${SFDC_PWD}"/>
 
   </target>
 
@@ -30,8 +30,8 @@
           <echo message=" --- Working on ${sf.src.dir}/${subfolder}${package_file}.xml ..."/>
           <delete dir="${sf.src.dir}_data-${package_file}"/>
           <mkdir dir="${sf.src.dir}_data-${package_file}"/>
-          <sf:retrieve username="${sf.mohan.username}" password="${sf.mohan.password}"
-              serverurl="${sf.mohan.serverurl}"
+          <sf:retrieve username="${SFDC_UN}" password="${SFDC_PWD}"
+              serverurl="${SFDC_URL}"
               maxPoll="${sf.maxPoll}"
               retrieveTarget="${sf.src.dir}_data-${package_file}"
               unpackaged="${sf.src.dir}/${subfolder}${package_file}.xml"/>
