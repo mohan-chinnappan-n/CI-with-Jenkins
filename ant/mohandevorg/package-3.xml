@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <version>34.0</version>
+
     <types>
         <members>*</members>
         <name>Flow</name>
@@ -16,11 +18,1074 @@
 <!-- standard objects -->
 
 
-<types>
-        <members>Account</members>
-        <name>CustomObject</name>
-</types>
 
 
-    <version>34.0</version>
-</Package>
+        <types>
+          <members>Attachment</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AcceptedEventRelation</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Account</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AccountCleanInfo</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AccountContactRole</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AccountFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AccountHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AccountPartner</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AccountShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ActionLinkGroupTemplate</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ActionLinkTemplate</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ActivityHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AdditionalNumber</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AggregateResult</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Announcement</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexClass</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexComponent</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexLog</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexPage</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexTestQueueItem</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexTestResult</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ApexTrigger</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AppMenuItem</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Asset</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AssetFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AssetHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AssetShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AssignmentRule</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AsyncApexJob</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AttachedContentDocument</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Attachment</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AuraDefinition</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AuraDefinitionBundle</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AuthConfig</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AuthConfigProviders</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AuthProvider</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>AuthSession</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>BackgroundOperation</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>BrandTemplate</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>BusinessHours</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>BusinessProcess</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CallCenter</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Campaign</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CampaignFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CampaignMember</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CampaignMemberStatus</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CampaignShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Case</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseComment</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseContactRole</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseSolution</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseStatus</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseTeamMember</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseTeamRole</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseTeamTemplate</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseTeamTemplateMember</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CaseTeamTemplateRecord</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CategoryData</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CategoryNode</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ChatterActivity</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ClientBrowser</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CollaborationGroup</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CollaborationGroupFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CollaborationGroupMember</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CollaborationGroupMemberRequest</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CollaborationGroupRecord</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CollaborationInvitation</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Community</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ConnectedApplication</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Contact</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContactCleanInfo</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContactFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContactHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContactShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentDistribution</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentDistributionView</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentDocument</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentDocumentFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentDocumentHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentDocumentLink</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentVersion</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentVersionHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentWorkspace</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContentWorkspaceDoc</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Contract</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContractContactRole</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContractFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContractHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ContractStatus</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CorsWhitelistEntry</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CronJobDetail</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CronTrigger</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CustomBrand</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CustomBrandAsset</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CustomObjectUserLicenseMetrics</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CustomPermission</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>CustomPermissionDependency</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DandBCompany</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Dashboard</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DashboardComponent</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DashboardComponentFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DashboardFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DatacloudCompany</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DatacloudContact</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DatacloudDandBCompany</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DatacloudOwnedEntity</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DatacloudPurchaseUsage</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DatacloudSocialHandle</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DcSocialProfile</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DcSocialProfileHandle</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DeclinedEventRelation</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Document</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DocumentAttachmentMap</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Domain</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DomainSite</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DuplicateRecordItem</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DuplicateRecordSet</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>DuplicateRule</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EmailDomainKey</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EmailMessage</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EmailServicesAddress</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EmailServicesFunction</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EmailStatus</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EmailTemplate</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EntityDefinition</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EntitySubscription</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Event</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EventFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EventLogFile</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>EventRelation</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ExternalDataSource</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ExternalDataUserAuth</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FeedComment</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FeedItem</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FeedLike</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FeedPollChoice</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FeedPollVote</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FeedTrackedChange</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FieldDefinition</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FieldPermissions</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FiscalYearSettings</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FlowInterview</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>FlowInterviewShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Folder</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ForecastShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>GrantedByLicense</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Group</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>GroupMember</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Holiday</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Idea</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>IdeaComment</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>InstalledMobileApp</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>KnowledgeableUser</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Lead</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LeadCleanInfo</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LeadFeed</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LeadHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LeadShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LeadStatus</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ListView</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ListViewChartInstance</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LoginHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LoginIp</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>LookedUpFromActivity</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Macro</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>MacroHistory</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>MacroShare</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>MailmergeTemplate</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>MatchingRule</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>MatchingRuleItem</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Name</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>NamedCredential</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>Note</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>OauthToken</members>
+          <name>CustomObject</name>
+        </types>
+
+
+        <types>
+          <members>ObjectPermissions</members>
+          <name>CustomObject</name>
+        </types>
+
+        <version>34.0</version>
+    </Package>
